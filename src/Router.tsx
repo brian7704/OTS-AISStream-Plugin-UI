@@ -1,12 +1,15 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { HomePage } from './pages/Home.page';
+import {AISStream} from "@/pages/AISStream";
+import React from "react";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <HomePage />,
+    path: '/ui',
+    element: <AISStream />,
   },
-]);
+  ],
+    {basename: "/api/plugins/ots_aisstream_plugin"}
+  );
 
 export function Router() {
   return <RouterProvider router={router} />;
